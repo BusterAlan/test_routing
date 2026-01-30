@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
     }
 
     context.router.replace(
-      ProfileRoute(),
+      DashboardRoute(),
     );
   }
 }
