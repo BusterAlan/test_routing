@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:test_routing/pages/profile_page.dart';
+import 'package:test_routing/router/app_router.gr.dart';
 
+@RoutePage()
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -46,8 +48,8 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
 
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => const ProfilePage()),
+    context.router.replace(
+      ProfileRoute(),
     );
   }
 }

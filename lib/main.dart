@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:test_routing/pages/login_page.dart';
-import 'package:test_routing/pages/profile_page.dart';
+import 'package:test_routing/router/app_router.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
+
+  final _appRouter = AppRouter();
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
+  Widget build(BuildContext context) => MaterialApp.router(
     debugShowCheckedModeBanner: false,
-    routes: {
-      "/": (context) => const LoginPage(),
-      "/home": (context) => const ProfilePage(),
-    },
-    initialRoute: "/",
+    routerConfig: _appRouter.config(),
   );
 }

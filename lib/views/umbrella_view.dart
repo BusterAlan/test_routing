@@ -1,5 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:package_a/pages/home_page.dart';
+import 'package:package_a/routes/package_a_router.gr.dart';
 
 class UmbrellaView extends StatelessWidget {
   const UmbrellaView({super.key});
@@ -12,9 +13,7 @@ class UmbrellaView extends StatelessWidget {
     ),
   );
 
-  void _onPressed(BuildContext context) {
-    Navigator.of(
-      context,
-    ).push(MaterialPageRoute(builder: (context) => const HomePage()));
-  }
+  void _onPressed(BuildContext context) => context.router.push(
+    const HomeRoute()
+  );
 }
