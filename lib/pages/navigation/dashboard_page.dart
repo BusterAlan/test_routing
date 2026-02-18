@@ -22,7 +22,7 @@ class DashboardPage extends StatelessWidget {
           fixedColor: Colors.red,
           unselectedItemColor: Colors.amber,
           currentIndex: tabsRouter.activeIndex,
-          onTap: (value) => tabsRouter.setActiveIndex(value),
+          onTap: tabsRouter.setActiveIndex,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           items: [

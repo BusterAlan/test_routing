@@ -6,7 +6,10 @@ import 'package:package_a/routes/package_a_router.dart';
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(page: LoginRoute.page, path: "/"),
+    AutoRoute(
+      page: LoginRoute.page, 
+      path: "/",
+    ),
     AutoRoute(
       page: DashboardRoute.page,
       path: "/dashboard",
@@ -20,6 +23,10 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: UmbrellaRoute.page, path: "umbrella"),
         AutoRoute(page: OnDeviceTrainingRoute.page, path: "device"),
       ],
+    ),
+    AutoRoute(
+      page: WeatherRoute.page,
+      path: "/weather",
     ),
     ...PackageARouter().routes,
   ];
