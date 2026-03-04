@@ -205,4 +205,4 @@ dependencies:
     path: ../package_a
 ```
 
-Ver el README de (package_a)[https://github.com/BusterAlan/package_a/tree/auto_route_navigation] para más detalles sobre cómo encapsula sus propias rutas.
+Ver el README de [package_a](https://github.com/BusterAlan/package_a/tree/auto_route_navigation) para más detalles sobre cómo encapsula sus propias rutas.
